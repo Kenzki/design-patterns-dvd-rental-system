@@ -1,0 +1,32 @@
+@startuml
+
+
+interface Price{
+getCost(): int
+}
+class Children{
+getCost(): int
+}
+class NewRelease{
+getCost(): int
+}
+class OldRelease{
+getCost(): int
+}
+class ProcessRentals{
+-price:Price
++executePrice(): int
+}
+
+
+
+NewRelease --|> Price
+OldRelease --|> Price
+Children --|> Price
+Price <|-- ProcessRentals
+
+
+
+
+
+@enduml
