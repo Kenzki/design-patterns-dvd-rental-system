@@ -1,29 +1,29 @@
 @startuml
 
 
-interface Price{
+interface DVDRateStrategy{
 getCost(): int
 }
-class Children{
+class ChildrenRate{
 getCost(): int
 }
-class NewRelease{
+class NewReleaseRate{
 getCost(): int
 }
-class OldRelease{
+class OldReleaseRate{
 getCost(): int
 }
 class ProcessRentals{
--price:Price
+-DVDRateStrategy:DVDRateStrategy
 +executePrice(): int
 }
 
 
 
-NewRelease --|> Price
-OldRelease --|> Price
-Children --|> Price
-Price <|-- ProcessRentals
+NewReleaseRate --|> DVDRateStrategy
+OldReleaseRate --|> DVDRateStrategy
+ChildrenRate --|> DVDRateStrategy
+DVDRateStrategy <|-- ProcessRentals
 
 
 

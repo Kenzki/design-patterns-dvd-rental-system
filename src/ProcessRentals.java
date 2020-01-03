@@ -1,11 +1,11 @@
 public class ProcessRentals {
-    private Price price;
+    private DVDRateStrategy DVDRateStrategy;
 
-    public ProcessRentals(Price price){
-        this.price = price;
+    public ProcessRentals(DVDRateStrategy DVDRateStrategy){
+        this.DVDRateStrategy = DVDRateStrategy;
     }
 
-    public int executePrice(int days){
-        return price.getCost(days);
+    public int executeRate(int days){
+        return DVDRateStrategy.getRate(days);
     }
 }
