@@ -1,3 +1,5 @@
+import BundleDeal.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,6 +13,7 @@ public class Main {
 
         processRentals = new ProcessRentals(new NewReleaseRate());
         System.out.println("The cost for New Release DVD is €" + processRentals.executeRate(1));
+
 
 
 
