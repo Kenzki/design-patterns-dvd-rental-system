@@ -1,8 +1,12 @@
 import BundleDeal.*;
+import SystemAccess.*;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        AdminAccess access = new ProxyAdminAccess("Kenneth");
+        access.grantAdminAccess();
 
         ProcessRentals processRentals = new ProcessRentals(new ChildrenRate());
 
@@ -13,6 +17,8 @@ public class Main {
 
         processRentals = new ProcessRentals(new NewReleaseRate());
         System.out.println("The cost for New Release DVD is €" + processRentals.executeRate(1));
+
+
 
 
 
