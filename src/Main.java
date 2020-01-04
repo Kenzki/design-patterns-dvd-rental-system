@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        AdminAccess access = new ProxyAdminAccess("Kenneth");
+        AdminAccess access = new ProxyAdminAccess("David Kenny");
         access.grantAdminAccess();
 
         ProcessRentals processRentals = new ProcessRentals(new ChildrenRate());

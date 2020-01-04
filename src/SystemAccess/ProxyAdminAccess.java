@@ -8,7 +8,7 @@ public class ProxyAdminAccess implements AdminAccess {
     }
     @Override
     public void grantAdminAccess(){
-        if(staffName == "Kenneth"){
+        if(staffName == "David Kenny"){
             realAccess = new RealAdminAccess(staffName);
             realAccess.grantAdminAccess();
         }
