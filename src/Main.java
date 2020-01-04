@@ -1,4 +1,7 @@
 import BundleDeal.*;
+import Member.Member;
+import Newsletters.Newsletter;
+import Newsletters.Observer;
 import SystemAccess.*;
 
 public class Main {
@@ -19,7 +22,11 @@ public class Main {
         System.out.println("The cost for New Release DVD is €" + processRentals.executeRate(1));
 
 
+        Member michael = new Member("Michael", "michael@gmail.com", "Dublin");
 
+        Newsletter news = new Newsletter();
+        news.registerObserver(michael);
+        news.setNews("Marvel, Starwars, Etc..");
 
 
 
