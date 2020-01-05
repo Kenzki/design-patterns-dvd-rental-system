@@ -14,7 +14,7 @@ title __BUNDLEDEAL's Class Diagram__\n
       abstract class BundleDeal.BundleDealDecorator {
           {abstract} + getDescription()
 
-
+}
 
 
       class BundleDeal.DrinkBundle {

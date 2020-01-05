@@ -19,7 +19,7 @@ title __NEWSLETTERS's Class Diagram__\n
   
 
 
-      interface Newsletters.Observer {
+      interface Newsletters.Observer <<interface>> {
           {abstract} + update()
       }
 
@@ -33,7 +33,9 @@ title __NEWSLETTERS's Class Diagram__\n
 
   
 
-  Newsletters.Newsletter .up.|> Newsletters.Subject
+  Newsletters.Newsletter .up.|> Newsletters.Subject : implementes
+  Newsletters.Subject --|> Newsletters.Observer : observers
+  Member .up.|> Newsletters.Observer : implements
 
 
 right footer

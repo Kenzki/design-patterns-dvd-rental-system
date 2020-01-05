@@ -3,7 +3,7 @@
 title __SYSTEMACCESS's Class Diagram__\n
 
 
-      interface SystemAccess.AdminAccess {
+      interface SystemAccess.AdminAccess <<interface>>{
           {abstract} + grantAdminAccess()
       }
 
@@ -27,9 +27,8 @@ title __SYSTEMACCESS's Class Diagram__\n
 
   
 
-  SystemAccess.ProxyAdminAccess .up.|> SystemAccess.AdminAccess
-  SystemAccess.ProxyAdminAccess o-- SystemAccess.RealAdminAccess : realAccess
-  SystemAccess.RealAdminAccess .up.|> SystemAccess.AdminAccess
+  SystemAccess.ProxyAdminAccess .up.|> SystemAccess.AdminAccess : implements
+  SystemAccess.RealAdminAccess .up.|> SystemAccess.AdminAccess : implements
 
 
 right footer

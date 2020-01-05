@@ -4,35 +4,31 @@ title __SRC's Class Diagram__\n
 
 
     class ChildrenRate {
-        + getRate()
+        + getRate() int
     }
 
   
 
 
     interface DVDRateStrategy {
-        {abstract} + getRate()
+        {abstract} + getRate() int
     }
 
   
 
-
-    class Main {
-        {static} + main()
-    }
 
   
 
 
     class NewReleaseRate {
-        + getRate()
+        + getRate() int
     }
 
   
 
 
     class OldReleaseRate {
-        + getRate()
+        + getRate() int
     }
 
   
@@ -40,15 +36,15 @@ title __SRC's Class Diagram__\n
 
     class ProcessRentals {
         + ProcessRentals()
-        + executeRate()
+        + executeRate() int
     }
 
   
 
-  ChildrenRate .up.|> DVDRateStrategy
-  NewReleaseRate .up.|> DVDRateStrategy
-  OldReleaseRate .up.|> DVDRateStrategy
-  ProcessRentals o-- DVDRateStrategy : DVDRateStrategy
+  ChildrenRate .up.|> DVDRateStrategy : implements
+  NewReleaseRate .up.|> DVDRateStrategy : implements
+  OldReleaseRate .up.|> DVDRateStrategy : implements
+  ProcessRentals o-- DVDRateStrategy
 
 
 right footer
