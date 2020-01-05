@@ -26,17 +26,16 @@ title __DVDRENTALSTATUS's Class Diagram__\n
           + rentalStatus()
       }
 
-      interface DVDRentalStatus.State {
+      interface DVDRentalStatus.State <<interface>>{
           {abstract} + rentalStatus()
       }
 
 
 
-  DVDRentalStatus.RentalStatusActive .up.|> DVDRentalStatus.State
-  DVDRentalStatus.RentalStatusContext .up.|> DVDRentalStatus.State
-  DVDRentalStatus.RentalStatusContext o-- DVDRentalStatus.State : rentalState
-  DVDRentalStatus.RentalStatusInactive .up.|> DVDRentalStatus.State
-  DVDRentalStatus.RentalStatusUnavailable .up.|> DVDRentalStatus.State
+  DVDRentalStatus.RentalStatusActive .up.|> DVDRentalStatus.State : implements
+  DVDRentalStatus.RentalStatusContext o-- DVDRentalStatus.State
+  DVDRentalStatus.RentalStatusInactive .up.|> DVDRentalStatus.State : implements
+  DVDRentalStatus.RentalStatusUnavailable .up.|> DVDRentalStatus.State : implements
 
 
 right footer

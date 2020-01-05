@@ -9,15 +9,11 @@ title __PROCESSRENTALS's Class Diagram__\n
           {abstract} ~ execute()
       }
 
-  
-
 
       class ProcessRentals.RentingDVD {
           ~ end()
           ~ execute()
       }
-
-  
 
 
       class ProcessRentals.ReturningDVD {

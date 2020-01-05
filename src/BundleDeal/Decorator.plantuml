@@ -48,12 +48,10 @@ title __BUNDLEDEAL's Class Diagram__\n
 
   BundleDeal.BundleDealDecorator -up-|> BundleDeal.BundleDeal
   BundleDeal.DrinkBundle -up-|> BundleDeal.BundleDealDecorator
-  BundleDeal.DrinkBundle o-- BundleDeal.BundleDeal : bundleDeal
   BundleDeal.NewRelease -up-|> BundleDeal.BundleDeal
   BundleDeal.OldRelease -up-|> BundleDeal.BundleDeal
   BundleDeal.SnackBundle -up-|> BundleDeal.BundleDealDecorator
-  BundleDeal.SnackBundle o-- BundleDeal.BundleDeal : bundleDeal
-
+  BundleDeal.BundleDeal --o BundleDeal.BundleDealDecorator
 
 right footer
 
