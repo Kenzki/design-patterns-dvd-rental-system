@@ -13,7 +13,7 @@ getCost(): int
 class OldReleaseRate{
 getCost(): int
 }
-class ProcessRentals{
+class DVDRentalRate{
 -DVDRateStrategy:DVDRateStrategy
 +executePrice(): int
 }
@@ -23,7 +23,7 @@ class ProcessRentals{
 NewReleaseRate --|> DVDRateStrategy
 OldReleaseRate --|> DVDRateStrategy
 ChildrenRate --|> DVDRateStrategy
-DVDRateStrategy <|-- ProcessRentals
+DVDRateStrategy <|-- DVDRentalRate
 
 
 

@@ -34,8 +34,8 @@ title __SRC's Class Diagram__\n
   
 
 
-    class ProcessRentals {
-        + ProcessRentals()
+    class DVDRentalRate {
+        + DVDRentalRate()
         + executeRate() int
     }
 
@@ -44,7 +44,7 @@ title __SRC's Class Diagram__\n
   ChildrenRate .up.|> DVDRateStrategy : implements
   NewReleaseRate .up.|> DVDRateStrategy : implements
   OldReleaseRate .up.|> DVDRateStrategy : implements
-  ProcessRentals o-- DVDRateStrategy
+  DVDRentalRate o-- DVDRateStrategy
 
 
 right footer

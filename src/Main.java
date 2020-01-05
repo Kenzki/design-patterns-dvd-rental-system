@@ -2,8 +2,8 @@ import BundleDeal.*;
 import DVDRentalStatus.*;
 import Member.Member;
 import Newsletters.Newsletter;
-import Newsletters.Observer;
 import SystemAccess.*;
+import ProcessRentals.*;
 
 public class Main {
 
@@ -12,14 +12,14 @@ public class Main {
         AdminAccess access = new ProxyAdminAccess("David Kenny");
         access.grantAdminAccess();
 
-        ProcessRentals processRentals = new ProcessRentals(new ChildrenRate());
+        DVDRentalRate processRentals = new DVDRentalRate(new ChildrenRate());
 
         System.out.println("\nThe cost for ChildrenRate DVD is €" + processRentals.executeRate(1));
 
-        processRentals = new ProcessRentals(new OldReleaseRate());
+        processRentals = new DVDRentalRate(new OldReleaseRate());
         System.out.println("The cost for Old Release DVD is €" + processRentals.executeRate(1));
 
-        processRentals = new ProcessRentals(new NewReleaseRate());
+        processRentals = new DVDRentalRate(new NewReleaseRate());
         System.out.println("The cost for New Release DVD is €" + processRentals.executeRate(1) + "\n");
 
 
@@ -52,6 +52,13 @@ public class Main {
         bundleNewRelease = new SnackBundle(bundleNewRelease);
         bundleNewRelease = new DrinkBundle(bundleNewRelease);
         System.out.println(bundleNewRelease.getDescription()
-        + " are €" + bundleNewRelease.cost());
+        + " are €" + bundleNewRelease.cost()+ "\n");
+
+        ProcessRental rentingDVD = new RentingDVD();
+        ProcessRental returningDVD = new ReturningDVD();
+        rentingDVD.process();
+        returningDVD.process();
+
+
     }
 }

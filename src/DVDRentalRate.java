@@ -1,7 +1,7 @@
-public class ProcessRentals {
+public class DVDRentalRate {
     private DVDRateStrategy DVDRateStrategy;
 
-    public ProcessRentals(DVDRateStrategy DVDRateStrategy){
+    public DVDRentalRate(DVDRateStrategy DVDRateStrategy){
         this.DVDRateStrategy = DVDRateStrategy;
     }
 
