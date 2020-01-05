@@ -6,7 +6,7 @@ public class SnackBundle extends BundleDealDecorator {
         this.bundleDeal=bundleDeal;
     }
     public String getDescription(){
-        return bundleDeal.getDescription() +",SnackBundle";
+        return bundleDeal.getDescription() +",a Snack";
 
     }
     public double cost(){

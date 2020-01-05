@@ -2,7 +2,7 @@ package BundleDeal;
 
 public class OldRelease extends BundleDeal {
     public OldRelease(){
-        description = "Old Release";
+        description = "Old Release DVD";
 
     }
 

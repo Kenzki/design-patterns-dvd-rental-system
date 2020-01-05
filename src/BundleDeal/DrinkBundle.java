@@ -7,7 +7,7 @@ public class DrinkBundle extends BundleDealDecorator {
 
     }
     public String getDescription(){
-        return bundleDeal.getDescription()+ ", Drink";
+        return bundleDeal.getDescription()+ ",a Drink";
     }
     public double cost(){
         return 3 + bundleDeal.cost();

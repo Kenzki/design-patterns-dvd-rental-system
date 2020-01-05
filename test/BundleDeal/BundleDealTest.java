@@ -7,14 +7,10 @@ import static org.junit.Assert.*;
 public class BundleDealTest {
 
     @Test
-    public void getDescription() {
+    void testBundleDeal(){
+        BundleDeal newRelease = new NewRelease();
+        System.out.println(newRelease.getDescription()
+        + "£" + newRelease.cost());
     }
-
-    @Test
-    public void cost() {
-    }
-
-
-
 
 }
