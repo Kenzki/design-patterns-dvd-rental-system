@@ -1,4 +1,5 @@
 import BundleDeal.*;
+import DVDRentalStatus.*;
 import Member.Member;
 import Newsletters.Newsletter;
 import Newsletters.Observer;
@@ -27,6 +28,23 @@ public class Main {
         Newsletter news = new Newsletter();
         news.registerObserver(michael);
         news.setNews("Marvel, Starwars, Etc..");
+
+        RentalStatusContext context = new RentalStatusContext();
+        State rentalStatusActive = new RentalStatusActive();
+        State rentalStatusInactive = new RentalStatusInactive();
+        State rentalStatusUnavailable = new RentalStatusUnavailable();
+
+        context.setState(rentalStatusActive);
+        context.rentalStatus();
+
+        context.setState(rentalStatusInactive);
+        context.rentalStatus();
+
+        context.setState(rentalStatusUnavailable);
+        context.rentalStatus();
+
+
+
 
 
 
