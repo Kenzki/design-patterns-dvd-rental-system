@@ -1,4 +1,4 @@
-public class ChildrenRate implements DVDRateStrategy {
+public class ChildrenRate implements DVDRate {
 
     @Override
     public int getRate(int days) {

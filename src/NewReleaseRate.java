@@ -1,4 +1,4 @@
-public class NewReleaseRate implements DVDRateStrategy {
+public class NewReleaseRate implements DVDRate {
 
     @Override
     public int getRate(int days) {

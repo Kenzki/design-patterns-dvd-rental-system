@@ -10,7 +10,7 @@ title __SRC's Class Diagram__\n
   
 
 
-    interface DVDRateStrategy {
+    interface DVDRate <<interface>> {
         {abstract} + getRate() int
     }
 
@@ -41,10 +41,10 @@ title __SRC's Class Diagram__\n
 
   
 
-  ChildrenRate .up.|> DVDRateStrategy : implements
-  NewReleaseRate .up.|> DVDRateStrategy : implements
-  OldReleaseRate .up.|> DVDRateStrategy : implements
-  DVDRentalRate o-- DVDRateStrategy
+  ChildrenRate .up.|> DVDRate : implements
+  NewReleaseRate .up.|> DVDRate : implements
+  OldReleaseRate .up.|> DVDRate : implements
+  DVDRentalRate o-- DVDRate
 
 
 right footer

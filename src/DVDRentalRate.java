@@ -1,7 +1,7 @@
 public class DVDRentalRate {
-    private DVDRateStrategy DVDRateStrategy;
+    private DVDRate DVDRateStrategy;
 
-    public DVDRentalRate(DVDRateStrategy DVDRateStrategy){
+    public DVDRentalRate(DVDRate DVDRateStrategy){
         this.DVDRateStrategy = DVDRateStrategy;
     }
 

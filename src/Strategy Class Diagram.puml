@@ -1,7 +1,7 @@
 @startuml
 
 
-interface DVDRateStrategy{
+interface DVDRate{
 getCost(): int
 }
 class ChildrenRate{
@@ -14,16 +14,16 @@ class OldReleaseRate{
 getCost(): int
 }
 class DVDRentalRate{
--DVDRateStrategy:DVDRateStrategy
+-DVDRate:DVDRate
 +executePrice(): int
 }
 
 
 
-NewReleaseRate --|> DVDRateStrategy
-OldReleaseRate --|> DVDRateStrategy
-ChildrenRate --|> DVDRateStrategy
-DVDRateStrategy <|-- DVDRentalRate
+NewReleaseRate --|> DVDRate
+OldReleaseRate --|> DVDRate
+ChildrenRate --|> DVDRate
+DVDRate <|-- DVDRentalRate
 
 
 

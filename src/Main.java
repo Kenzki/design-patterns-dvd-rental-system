@@ -12,15 +12,15 @@ public class Main {
         AdminAccess access = new ProxyAdminAccess("David Kenny");
         access.grantAdminAccess();
 
-        DVDRentalRate processRentals = new DVDRentalRate(new ChildrenRate());
+        DVDRentalRate rentalRate = new DVDRentalRate(new ChildrenRate());
 
-        System.out.println("\nThe cost for ChildrenRate DVD is €" + processRentals.executeRate(1));
+        System.out.println("\nThe cost for ChildrenRate DVD is €" + rentalRate.executeRate(1));
 
-        processRentals = new DVDRentalRate(new OldReleaseRate());
-        System.out.println("The cost for Old Release DVD is €" + processRentals.executeRate(1));
+        rentalRate = new DVDRentalRate(new OldReleaseRate());
+        System.out.println("The cost for Old Release DVD is €" + rentalRate.executeRate(1));
 
-        processRentals = new DVDRentalRate(new NewReleaseRate());
-        System.out.println("The cost for New Release DVD is €" + processRentals.executeRate(1) + "\n");
+        rentalRate = new DVDRentalRate(new NewReleaseRate());
+        System.out.println("The cost for New Release DVD is €" + rentalRate.executeRate(1) + "\n");
 
 
         Member michael = new Member("Michael", "michael@gmail.com", "Dublin");

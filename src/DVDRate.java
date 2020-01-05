@@ -1,3 +1,3 @@
-public interface DVDRateStrategy {
+public interface DVDRate {
     public int getRate(int days);
 }
