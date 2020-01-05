@@ -9,5 +9,5 @@ Implementations on Design Patterns for a DVD Rental System
 - Proxy Pattern
 - Observer Pattern
 - State Pattern
-- Template Pattern
+- Template Method
 
